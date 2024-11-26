@@ -6,7 +6,7 @@
  * Return 1, succes, -1 error 
  */
 
-int _putchar(char character)
+char _putchar(char character)
 {
-	Return (write(1, &character, 1))
+	return (write(1, &character, 1));
 }		
