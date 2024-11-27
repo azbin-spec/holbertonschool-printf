@@ -13,8 +13,7 @@ int _printf(const char *format, ...)
 	int y;
 	int len = 0;
 	char *str;
-	char s;
-	
+
 	va_list arg;
 	va_start(arg, format);
 
@@ -23,44 +22,40 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	for (x = 0; format[x] != '\0' ; x++)
+	for (x = 0; format[x] != '\0'; x++)
 	{
-		if (format[x] == '%' && format[x + 1] == 'c')
-		{
-			s = va_arg(val, int);
-			_putchar(s);
-			return (1);
-		}	
-		else if (format[x] == '%' && format[x + 1] == 's')
-		{
+		if (str != NULL)
+		{	
 			str = va_arg(arg, char *);
-			{
-				if (str != NULL)
-				{
-					for (y = 0; str[y] != '\0'; y++)
-					{
-						_putchar(str[y]);
-						len++;
-					}
-				}
-				else if (str == NULL)
-				{
-					return (-1);
-				}
-			}
-		}
-		else if (format[x] == '%' && format[x + 1] == '%')
-		{
-			_putchar('%');
-			len++;
 
+			if (format[x] == '%' && format[x + 1] == 'c')
+			{
+				_putchar(*str);
+				len++;
+			}
+			else if (format[x] == '%' && format[x + 1] == 's')
+			{
+				for (y = 0; str[y] != '\0'; y++)
+				{
+					_putchar(str[y]);
+					len++;
+				}
+			}	
+			else if (format[x] == '%' && format[x + 1] == '%')
+			{
+				_putchar('%');
+				len++;
+			}
+			else
+			{
+				_putchar(format[x]);
+				len++;
+			}
 		}
 		else
 		{
-			_putchar(format[x]);
-			{
-				len++;
-			}
+			return (-1);
+			len++;
 		}
 	}
 	va_end(arg);
