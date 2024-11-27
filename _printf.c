@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 	int y;
 	int len = 0;
 	char *str;
-
+	char s;
+	
 	va_list arg;
 	va_start(arg, format);
 
@@ -24,7 +25,13 @@ int _printf(const char *format, ...)
 	}
 	for (x = 0; format[x] != '\0' ; x++)
 	{
-		if (format[x] == '%' && format[x + 1] == 's')
+		if (format[x] == '%' && format[x + 1] == 'c')
+		{
+			s = va_arg(val, int);
+			_putchar(s);
+			return (1);
+		}	
+		else if (format[x] == '%' && format[x + 1] == 's')
 		{
 			str = va_arg(arg, char *);
 			{
