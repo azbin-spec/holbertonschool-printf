@@ -2,11 +2,9 @@
 
 /**
  * print_modulo - Fonction that print a modulo character
- * @modulo: a modulo character 
  */
 
-void print_modulo(char modulo)
+void print_modulo(void)
 {
-	modulo = '%';
-	_putchar(modulo);
+	_putchar('%');
 }

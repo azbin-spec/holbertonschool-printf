@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _char - Fonction that print a character 
+ * print_char - Fonction that print a character
  * @character: a character
  */
 
-void print_char ;(char character)
+void print_char(char character)
 {
 
 	_putchar(character);
