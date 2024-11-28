@@ -9,56 +9,53 @@
 
 int _printf(const char *format, ...)
 {
-	int x;
-	int y;
-	int len = 0;
-	char *str;
+	int x, len = 0;
 
-	va_list arg;
-	va_start(arg, format);
-
+	va_list args;
+	va_start(args, format);
 
 	if (format == NULL)
 	{
 		return (-1);
 	}
-	for (x = 0; format[x] != '\0'; x++)
+	else
 	{
-		if (str != NULL)
-		{	
-			str = va_arg(arg, char *);
+		for (x = 0; format[x] != '\0' ; x++)
+		{
+			if (format[x] == '%' && format[x + 1] != '\0')
+			{
+				x++;
 
-			if (format[x] == '%' && format[x + 1] == 'c')
-			{
-				_putchar(*str);
-				len++;
-			}
-			else if (format[x] == '%' && format[x + 1] == 's')
-			{
-				for (y = 0; str[y] != '\0'; y++)
+				if (format[x] == 'c')
 				{
-					_putchar(str[y]);
+					print_char(va_arg(args, int));
 					len++;
 				}
-			}	
-			else if (format[x] == '%' && format[x + 1] == '%')
-			{
-				_putchar('%');
-				len++;
+				else if (format[x] == 's')
+				{
+					print_str(va_arg(args, char *));
+					len++;
+				}
+				else if (format[x] == '%')
+				{
+					print_modulo();
+					len++;
+
+				}
+				else
+				{
+					print_modulo();
+					_putchar(format[x]);
+						len++;
+				}
 			}
 			else
 			{
 				_putchar(format[x]);
-				len++;
+					len++;
 			}
 		}
-		else
-		{
-			return (-1);
-			len++;
-		}
 	}
-	va_end(arg);
-	return(len);
+	va_end(args);
+	return (len);
 }
-	
