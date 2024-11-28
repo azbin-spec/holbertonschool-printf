@@ -1,8 +1,12 @@
 #include <stdio.h>
 
+void printIntegers(int D, int I) {
+    printf("D = %d, I = %d\n", D, I);
+}
+
 int main() {
-    int D = 2147484671;  // Initialize D
-    int I = 2147484671;  // Initialize I
-    printf("D = %d, I = %d\n", D, I);  // Print values of D and I
+    int D = 10;
+    int I = 20;
+    printIntegers(D, I);
     return 0;
 }
