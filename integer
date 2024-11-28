@@ -1,12 +1,8 @@
 #include <stdio.h>
 
-int printIntegers() {
-    int D = 10;  // Initialize D
-    int I = 20;  // Initialize I
-    printf("D = %d, I = %d\n", D, I);
-    return 0;  // Return 0 to indicate successful execution
-}
-
 int main() {
-    return printIntegers();  // Call printIntegers() and return its result
+    int D = 2147484671;  // Initialize D
+    int I = 2147484671;  // Initialize I
+    printf("D = %d, I = %d\n", D, I);  // Print values of D and I
+    return 0;
 }
