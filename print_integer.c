@@ -1,57 +1,32 @@
 #include "main.h"
+
 /**
- * length_i - prints recursively
- * @i: The number to get the length
- * @len: The number length
- *
- * Return: On success length.
+ * print_integer - Function that prints integer
+ * @num: The variable integer
+ * Return: 0
  */
-int length_i(unsigned int i, int len)
-{
-	while (i / 10)
+
+int print_integer(int num)
+{	
+	if (num >= 0)
 	{
-		i = i / 10;
-		len++;
+		_putchar(num);
 	}
-	return (len);
+	Return 0
 }
 
 /**
- * repeat_i - prints recursively
- * @i: The number to be printed
- *
- * Return: nothing.
+ * print_negative - Function that prints a decimal number
+ * @num: The variable integer
+ * Return: 0
  */
-void repeat_i(unsigned int i)
-{
-	if (i / 10)
-	{
-		repeat_i(i / 10);
-	}
-	_putchar(i % 10 + '0');
-}
-/**
- * print_int - writes the integer i
- * @param: The name for va_list
- *
- * Return: On success 1.
- */
-int print_int(va_list *param)
-{
-	int i = 0, len = 0, negative = 0;
-	unsigned int limit;
 
-	i = va_arg(*param, int);
-	if (i < 0)
+int print_negative(int num)
+{
+	if (num < 0)
 	{
-		_putchar('-');
-		limit = -i;
-		negative = 1;
+		_putchar("-");
+		num= -num;
 	}
-	else
-		limit = i;
-	len += length_i(limit, len);
-	repeat_i(limit);
-	len = len + negative + 1;
-	return (len);
+	Return 0
 }
