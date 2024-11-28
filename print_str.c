@@ -8,7 +8,7 @@
 void print_str(const char *str)
 {
 	int x;
-	const char *n = (null);
+	const char *n = NULL;
 
 	if (str != NULL)
 	{
