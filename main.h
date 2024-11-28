@@ -13,8 +13,5 @@ void print_modulo(void);
 <<<<<<< HEAD
 int print_integer(int num);
 int print_negative(int num);
-=======
-int print_number(int n);
->>>>>>> 63d4662d182fece2e845b115cf5415341b04e256
 
 #endif
