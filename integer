@@ -1,0 +1,44 @@
+#include "main.h"
+#include <stdarg.h>
+
+/**
+ * _printf - Function to print signed decimal integers (%d, %i).
+ * @format: Format string containing the specifiers.
+ * Return: Length of printed output.
+ */
+int _printf(const char *format, ...)
+{
+	int x = 0, len = 0, num;
+	va_list arg;
+	va_start(arg, format);
+
+	while (format[x])
+	{
+		if (format[x] == '%' && format[x + 1])
+		{
+			x++;
+			if (format[x] == 'd' || format[x] == 'i') 
+			{
+				num = va_arg(arg, int);
+				if (num < 0) len += _putchar('-'), num = -num;
+				if (num / 10) len += print_number(num / 10);
+				len += _putchar((num % 10) + '0');
+			}
+		}
+		else len += _putchar(format[x]);
+		x++;
+	}
+
+	va_end(arg);
+	return (len);
+}
+
+/**
+ * print_number - Helper function to print numbers recursively.
+ * @n: The integer to print.
+ * Return: Length of the printed digits.
+ */
+int print_number(int n)
+{
+	return (n / 10 ? print_number(n / 10) : 0) + _putchar((n % 10) + '0');
+}
