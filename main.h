@@ -7,5 +7,8 @@
 
 char _putchar(char character);
 int _printf(const char *format, ...);
+void print_char(char character);
+void print_str(const char *str);
+void print_modulo(void);
 
 #endif

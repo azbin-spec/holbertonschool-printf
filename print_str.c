@@ -8,7 +8,6 @@
 void print_str(const char *str)
 {
 	int x;
-	const char *n = NULL;
 
 	if (str != NULL)
 	{
@@ -17,9 +16,4 @@ void print_str(const char *str)
 			_putchar(str[x]);
 		}
 	}
-	else if (str == NULL)
-	{
-		_putchar(*n);
-	}
 }
-
