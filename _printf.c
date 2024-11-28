@@ -1,63 +1,40 @@
 #include "main.h"
 
 /**
- * print_str - Fonction that print string,
- * following conversion specifiers %c, %s, %%
- * @format: number of arguments
- * Return: len
+ * _printf - printf command.
+ *
+ * @format: specifier.
+ *
+ * Return: numcount.
  */
-
 int _printf(const char *format, ...)
 {
-	int x;
-	int y;
-	int len = 0;
-	char *str;
+	int i = 0, numcount = 0;
+	va_list args;
 
-	va_list arg;
-	va_start(arg, format);
+	va_start(args, format);
 
-
-	if (format == NULL)
-	{
+	if (!format || (format[0] == '%' && !format[1]))
+		/*check if format is '%' followed by null */
 		return (-1);
-	}
-	for (x = 0; format[x] != '\0'; x++)
-	{
-		if (str != NULL)
-		{	
-			str = va_arg(arg, char *);
 
-			if (format[x] == '%' && format[x + 1] == 'c')
-			{
-				_putchar(*str);
-				len++;
-			}
-			else if (format[x] == '%' && format[x + 1] == 's')
-			{
-				for (y = 0; str[y] != '\0'; y++)
-				{
-					_putchar(str[y]);
-					len++;
-				}
-			}	
-			else if (format[x] == '%' && format[x + 1] == '%')
-			{
-				_putchar('%');
-				len++;
-			}
-			else
-			{
-				_putchar(format[x]);
-				len++;
-			}
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+	       /*check if format is '%' followed by space and null*/
+		return (-1);
+
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			numcount += _format(format[i + 1], args);/*take the specifier*/
+			i++;
 		}
 		else
 		{
-			return (-1);
-			len++;
+			numcount++;
+			_putchar(format[i]);
 		}
 	}
-	va_end(arg);
-	return(len);
+	va_end(args);
+	return (numcount);
 }
