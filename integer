@@ -10,4 +10,3 @@ int printIntegers() {
 int main() {
     return printIntegers();  // Call printIntegers() and return its result
 }
-
