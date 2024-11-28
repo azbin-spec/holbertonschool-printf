@@ -7,5 +7,6 @@
 
 void print_char ;(char character)
 {
+
 	_putchar(character);
 }
