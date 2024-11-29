@@ -2,27 +2,25 @@
 
 /**
  * print_str - Fonction that prints string
- * @str: a string
+ * @args: a list
+ * Return: an integer
  */
 
-void print_str(const char *str)
+int print_str(va_list args)
 {
-	int x;
+	int len = 0;
 
-	if (str != NULL)
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
 	{
-		for (x = 0; str[x] != '\0'; x++)
-		{
-			_putchar(str[x]);
-		}
+		str = "(null)";
 	}
-	else
+	while (*str)
 	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
+		_putchar(*str);
+		str++;
+		len++;
 	}
+	return (len);
 }

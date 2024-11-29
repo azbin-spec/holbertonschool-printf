@@ -2,22 +2,13 @@
 
 /**
  * print_char - Fonction that prints a character
- * @character: a character
+ * @args: a list
+ * Return: an integer
  */
 
-void print_char(char character)
+int print_char(va_list args)
 {
-	if (character != '\0')
-	{
-	_putchar(character);
-	}
-	else
-	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
-	}
+	char character = va_arg(args, int);
+
+	return (_putchar(character));
 }

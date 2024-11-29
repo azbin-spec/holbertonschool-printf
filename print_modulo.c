@@ -2,9 +2,12 @@
 
 /**
  * print_modulo - Fonction that print a modulo character
+ * @args: a list
+ * Return: a modulo
  */
 
-void print_modulo(void)
+int print_modulo(va_list args)
 {
-	_putchar('%');
+	(void)args;
+	return (_putchar('%'));
 }
