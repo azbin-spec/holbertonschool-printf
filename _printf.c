@@ -25,29 +25,28 @@ int _printf(const char *format, ...)
 			if (format[x] == '%' && format[x + 1] != '\0')
 			{
 				x++;
-
 				if (format[x] == 'c')
 				{
 					print_char(va_arg(args, int));
-					len++;
 				}
 				else if (format[x] == 's')
 				{
 					print_str(va_arg(args, char *));
-					len++;
 				}
 				else if (format[x] == '%')
 				{
 					print_modulo();
-					len++;
-
+				}
+				else if (format[x] == 'd' || format[x] == 'i')
+				{
+					print_integer(va_arg(args, int));
 				}
 				else
 				{
 					print_modulo();
 					_putchar(format[x]);
-						len++;
 				}
+				len++;
 			}
 			else
 			{
