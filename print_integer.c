@@ -6,27 +6,35 @@
  * Return: 0
  */
 
-int print_integer(int num)
-{	
-	if (num >= 0)
-	{
-		_putchar(num);
-	}
-	Return 0
-}
-
-/**
- * print_negative - Function that prints a decimal number
- * @num: The variable integer
- * Return: 0
- */
-
-int print_negative(int num)
+int print_integer(long int num)
 {
-	if (num < 0)
+	int power = 1;
+
+	if (num != '\0')
 	{
-		_putchar("-");
-		num= -num;
+		if (num < 0)
+		{
+			_putchar(45);
+			num *= -1;
+		}
+		while (num / power > 9)
+		{
+			power *= 10;
+		}
+		while (power >= 1)
+		{
+			_putchar(((num / power) % 10) + '0');
+			power /= 10;
+		}
 	}
-	Return 0
+	else
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+	}
+	return (0);
 }

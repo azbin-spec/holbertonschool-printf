@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_str - Fonction that print a string
+ * print_str - Fonction that prints string
  * @str: a string
  */
 
@@ -15,5 +15,14 @@ void print_str(const char *str)
 		{
 			_putchar(str[x]);
 		}
+	}
+	else
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
 	}
 }
