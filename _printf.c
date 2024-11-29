@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_str - Fonction that print string,
+ * _printf - Fonction that print string,
  * following conversion specifiers %c, %s, %%
  * @format: number of arguments
  * Return: len
@@ -10,49 +10,29 @@
 int _printf(const char *format, ...)
 {
 	int x, len = 0;
-
 	va_list args;
+
 	va_start(args, format);
 
-	if (format == NULL)
+	if (format == NULL || format[0] == '%' && format[1] == '\0')
 	{
 		return (-1);
 	}
-	else
+	if (format == '%' && format[1] == ' ' && format[2] == '\0')
 	{
-		for (x = 0; format[x] != '\0' ; x++)
+		return (-1);
+	}
+	for (x = 0; format[x] != '\0' ; x++)
+	{
+		if (format[x] == '%')
 		{
-			if (format[x] == '%' && format[x + 1] != '\0')
-			{
-				x++;
-				if (format[x] == 'c')
-				{
-					print_char(va_arg(args, int));
-				}
-				else if (format[x] == 's')
-				{
-					print_str(va_arg(args, char *));
-				}
-				else if (format[x] == '%')
-				{
-					print_modulo();
-				}
-				else if (format[x] == 'd' || format[x] == 'i')
-				{
-					print_integer(va_arg(args, int));
-				}
-				else
-				{
-					print_modulo();
-					_putchar(format[x]);
-				}
-				len++;
-			}
-			else
-			{
-				_putchar(format[x]);
-					len++;
-			}
+			len += get_specifier(format[x + 1], args);
+			x++;
+		}
+		else
+		{
+			_putchar(format[x]);
+			len++;
 		}
 	}
 	va_end(args);
