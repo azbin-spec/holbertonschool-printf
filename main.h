@@ -10,7 +10,6 @@ int _printf(const char *format, ...);
 void print_char(char character);
 void print_str(const char *str);
 void print_modulo(void);
-int print_integer(int num);
-int print_negative(int num);
+int print_integer(long int num);
 
 #endif
