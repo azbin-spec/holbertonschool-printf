@@ -2,39 +2,35 @@
 
 /**
  * print_integer - Function that prints integer
- * @num: The variable integer
- * Return: 0
+ * @args: a list
+ * Return: length
  */
 
-int print_integer(long int num)
+int print_integer(va_list args)
 {
 	int power = 1;
+	int result = 0;
+	long int num = va_arg(args, int);
+	long int div;
 
-	if (num != '\0')
+	if (num < 0)
 	{
-		if (num < 0)
-		{
-			_putchar(45);
-			num *= -1;
-		}
-		while (num / power > 9)
-		{
-			power *= 10;
-		}
-		while (power >= 1)
-		{
-			_putchar(((num / power) % 10) + '0');
-			power /= 10;
-		}
+		result += 1;
+		_putchar('-');
+		num *= -1;
 	}
-	else
+	if (num < 10)
+		return (result += _putchar(num + '0'));
+	div = num;
+	while (div > 9)
 	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
+		power *= 10;
+		div /= 10;
 	}
-	return (0);
+	while (power >= 1)
+	{
+		result += (_putchar(((num / power) % 10) + '0'));
+		power /= 10;
+	}
+	return (result);
 }
