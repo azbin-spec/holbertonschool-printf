@@ -20,7 +20,7 @@ The _printf() function processes a format string and arguments to produce format
 
 #Compilation & Style ⚙️
 
-[gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c](![image](https://github.com/user-attachments/assets/c7ae49a6-4cc3-4f38-b072-e810ed77e2dd)
+[gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c]()
 )
 
 All your files will be compiled on Ubuntu 20.04 LTS 🖥️ using gcc, with the options:
