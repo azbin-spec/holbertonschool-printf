@@ -48,7 +48,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 ![Capture_decran_2024-11-30_164459](https://github.com/user-attachments/assets/0ac0599a-594a-476a-a5b0-785f791d5bda)
 
-# testing 
+# Testing 
 
 ![Capture_decran_2024-11-30_221247](https://github.com/user-attachments/assets/ef7d7446-90f4-4173-a34b-cf5655d2aff5)
 
