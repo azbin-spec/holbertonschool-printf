@@ -33,5 +33,5 @@ Prints: Character: A
 .TP
 _printf("Percent sign: %%");
 Prints: Percent sign: %
-.SH SEE ALSO
+	.SH SEE ALSO
 .BR printf (3)
