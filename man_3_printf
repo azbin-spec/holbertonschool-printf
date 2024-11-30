@@ -1,4 +1,4 @@
-.TH PRINTF 3 "November 2024" "Holbeton School Project" "Library Functions"
+.TH PRINTF 3 "30 November 2024" "Holbeton School Project" "Library Functions"
 
 .SH NAME
 _printf \- produces formatted output
@@ -70,5 +70,5 @@ Prints: %z (the percent sign and the specifier)
 printf(3), va_start(3), va_arg(3)
 
 	.SH AUTHORS 
-	Brenda Palligot , Abdellah Dydouh 
+	Brenda Pollagba , Abdellah Dydouh 
 
