@@ -1,4 +1,4 @@
-.TH _PRINTF 3 "November 2024" "1.0" "Library Functions"
+.TH _PRINTF 3 "November 2024" "1.0" "manual"
 .SH NAME
 _printf \- produces output according to a format
 .SH SYNOPSIS
