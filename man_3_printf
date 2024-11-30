@@ -1,11 +1,16 @@
-.TH PRINTF 3 "November 2024" "Holbeton School Project" "User Commands"
+.TH PRINTF 3 "November 2024" "Holbeton School Project" "Library Functions"
 
 .SH NAME
 _printf \- produces formatted output
 
 .SH SYNOPSIS
-.B #include "main.h"
-.B int _printf(const char *format, ...);
+#include <stdio.h>
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The _printf function formats and prints a series of characters and values
+to the standard output (stdout) according to the provided format string.
+
 
 .SH SYNOPSIS
 The _printf function is a simplified version of the standard printf function. It processes a format string and prints corresponding arguments based on the format specifiers. It supports basic specifiers for printing characters, strings, and integers, as well as a literal percent sign.
