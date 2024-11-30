@@ -24,23 +24,25 @@ The _printf() function processes a format string and arguments to produce format
 
 All your files will be compiled on Ubuntu 20.04 LTS 🖥️ using gcc, with the options:
 
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+ `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c `
 Your code should use the Betty style ✍️. It will be checked using betty-style.pl and betty-doc.pl.
 
 # Requirements 
-## `General` 
+## General
 
-Allowed editors: vi, vim, emacs 
+• Allowed editors: vi, vim, emacs 📝
 
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89 
+• All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options: 🖥️
 
-You are not allowed to use global variables 
+• You are not allowed to use global variables 🚫
 
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl 
+• Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl 📚
 
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation; do not push your own main.c file. Our main.c files might be different from the one shown in the examples
+• In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation; do not push your own main.c file. Our main.c files might be different from the one shown in the examples 🔧
 
-The prototypes of all your functions should be included in your header file called main.h
+• The prototypes of all your functions should be included in your header file called main.h 📑
+
+• No more than 5 functions per file 📂
 
 # Authorized Functions 🆗
 ## Authorized functions and macros:
