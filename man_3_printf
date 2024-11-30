@@ -1,9 +1,12 @@
 .TH _PRINTF 3 "November 2024" "1.0" "Library Functions"
+
 .SH NAME
 _printf \- produces output according to a format
+
 .SH SYNOPSIS
 .B #include "main.h"
 .PP
+
 .B int _printf(const char *format, ...);
 .SH DESCRIPTION
 The \fB_printf\fP function produces output according to a specified format string and a variable number of arguments. It works similarly to the standard \fBprintf\fP function in C, supporting various format specifiers.
