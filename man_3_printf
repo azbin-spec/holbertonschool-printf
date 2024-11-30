@@ -4,8 +4,10 @@
 
 .SH NAME
 _printf \- Custom implementation of printf for formatted output
+
 .SH SYNOPSIS
 int _printf(const char *format, ...);
+
 .SH DESCRIPTION
 The _printf function is a simplified version of the standard printf function. It processes a format string and prints corresponding arguments based on the format specifiers. It supports basic specifiers for printing characters, strings, and integers, as well as a literal percent sign.
 
@@ -48,12 +50,11 @@ _printf("Character: %c\n", 'A');
 Prints: Character: A
 
 .TP
-<<<<<<< HEAD
 _printf("Percent sign: %%");
 Prints: Percent sign: %
 	.SH SEE ALSO
 .BR printf (3)
-=======
+
 _printf("Number: %d\n", 42);
 Prints: Number: 42
 
@@ -63,4 +64,7 @@ Prints: %z (the percent sign and the specifier)
 
 .SH SEE ALSO
 printf(3), va_start(3), va_arg(3)
->>>>>>> d7bcb778c2a5be2061d40f80ab228b548aebecfe
+
+.SH AUTHORS 
+Brenda Palligot , Abdellah Dydouh 
+
