@@ -8,11 +8,8 @@ _printf \- produces formatted output
 int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-The _printf function formats and prints a series of characters and values
 to the standard output (stdout) according to the provided format string.
 
-
-.SH SYNOPSIS
 The _printf function is a simplified version of the standard printf function. It processes a format string and prints corresponding arguments based on the format specifiers. It supports basic specifiers for printing characters, strings, and integers, as well as a literal percent sign.
 
 The following format specifiers are supported:
@@ -44,6 +41,8 @@ On success, _printf returns the total number of characters printed (excluding th
 .SH ERRORS
 If the format string is NULL or contains only a percent sign with no specifier following it, the function returns -1. If an unrecognized format specifier is encountered, the function will print the specifier itself and return the number of characters printed.
 
+If the string is NULL , the function will return ("null")
+
 .SH EXAMPLES
 .TP
 _printf("Hello %s!\n", "World");
@@ -54,7 +53,7 @@ _printf("Character: %c\n", 'A');
 Prints: Character: A
 
 .TP
-_printf("Percent sign: %%");
+_printf("Percent sign: %%\n");
 Prints: Percent sign: %
 
 .SH SEE ALSO
