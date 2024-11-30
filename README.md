@@ -1,18 +1,18 @@
-Project Printf
+# Project Printf
 
 This repository contains a custom implementation of the _printf() function in C, created as part of the Low-level Programming and Algorithm curriculum at Holberton School. The function mimics the behavior of the standard printf(), enabling formatted output with various specifiers.
 
-Overview
+# Overview
 
 The _printf() function processes a format string and arguments to produce formatted output. It supports several specifiers, such as %c, %s, %d, %i, and %%, among others. The implementation is modular and extensible, allowing additional specifiers to be added as needed.
 
-Compilation & Style
+# Compilation & Style
 
 Compiled on Ubuntu 20.04 LTS using:
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 Adheres to the Betty coding style, verified with betty-style.pl and betty-doc.pl.
 
-Function prototypes
+# Function prototypes
 All function prototypes used to compile _printf() are included in the header file main.h:
 
 int _putchar(char c);
@@ -24,7 +24,7 @@ int print_string(va_list args);
 int print_percent(va_list args);
 int print_integer(va_list args);
 
-File Descriptions
+# File Descriptions
 
 _printf: Handles formatted output by processing the format string and calling the appropriate functions for each specifier.
 _putchar: Writes a single character to standard output using the write system call.
