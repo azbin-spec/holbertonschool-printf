@@ -1,37 +1,56 @@
-.TH _PRINTF 3 "November 2024" "1.0" "manual"
+.TH _PRINTF 3 "November 2024" "1.0" "Library Functions Manual"
 .SH NAME
-_printf \- produces output according to a format
+_printf \- Custom implementation of printf for formatted output
 .SH SYNOPSIS
-.B #include "main.h"
-.PP
-.B int _printf (const char *format, ...);
+.B int _printf(const char *format, ...);
 .SH DESCRIPTION
-The \fB_printf\fP function produces output according to a specified format string and a variable number of arguments. It works similarly to the standard \fBprintf\fP function in C, supporting various format specifiers.
-The function supports the following format specifiers:
+The _printf function is a simplified version of the standard printf function. It processes a format string and prints corresponding arguments based on the format specifiers. It supports basic specifiers for printing characters, strings, and integers, as well as a literal percent sign.
+
+The following format specifiers are supported:
+.IP %c
+Prints a single character.
+.IP %s
+Prints a string of characters (null-terminated).
+.IP %%
+Prints a literal percent sign.
+.IP %d
+Prints a signed decimal number (base 10).
+.IP %i
+Prints a signed integer (base 10).
+
+The function processes the format string, handles each specifier, and prints the appropriate output. It skips over any non-specifier characters and prints them directly.
+
+.SH PARAMETERS
 .TP
-.B %c
-Print a single character.
+format
+A pointer to a null-terminated string containing the format specifiers and the characters to be printed.
+
 .TP
-.B %s
-Print a string.
-.TP
-.B %%
-Print a literal percent sign.
-.TP
-.B %d, %i
-Print an integer.
-The function scans the \fBformat\fP string character by character and produces the corresponding output based on the format specifiers. For unsupported specifiers or an invalid format, the function prints a literal percent sign followed by the character that follows the percent symbol.
+...
+A variable number of arguments that correspond to the format specifiers in the format string.
+
 .SH RETURN VALUE
-The function returns the number of characters printed (not including the terminating null byte) or \-1 if there is an error, such as when \fBformat\fP is NULL.
+On success, _printf returns the total number of characters printed (excluding the null byte). If an error occurs (such as a null format string or an invalid format specifier), the function returns -1.
+
+.SH ERRORS
+If the format string is NULL or contains only a percent sign with no specifier following it, the function returns -1. If an unrecognized format specifier is encountered, the function will print the specifier itself and return the number of characters printed.
+
 .SH EXAMPLES
 .TP
-printf("Hello, %s!", "world");
-Prints: Hello, world!
+_printf("Hello %s!\n", "World");
+Prints: Hello World!
+
 .TP
-_printf("Character: %c", 'A');
+_printf("Character: %c\n", 'A');
 Prints: Character: A
+
 .TP
-_printf("Percent sign: %%");
-Prints: Percent sign: %
+_printf("Number: %d\n", 42);
+Prints: Number: 42
+
+.TP
+_printf("Invalid specifier: %z\n");
+Prints: %z (the percent sign and the specifier)
+
 .SH SEE ALSO
-.BR printf (3)
+printf(3), va_start(3), va_arg(3)
