@@ -2,8 +2,8 @@
 
 /**
  * print_modulo - Fonction that print a modulo character
- * @args: a list
- * Return: a modulo
+ * @args: a the list set in _printf function
+ * Return: length the modulo and a modulo
  */
 
 int print_modulo(va_list args)

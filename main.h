@@ -15,8 +15,8 @@ int get_specifier(const char format, va_list args);
 
 /**
  * struct spe - a structure that check specifier
- * @specifier: the character specifier
- * @f: a function
+ * @specifier: the character of the specifier
+ * @f: a pointer function pointing to _printf
  */
 
 typedef struct spe

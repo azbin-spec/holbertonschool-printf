@@ -2,8 +2,8 @@
 
 /**
  * print_char - Fonction that prints a character
- * @args: a list
- * Return: an integer
+ * @args: a the list set in _printf function
+ * Return: length of the character printed
  */
 
 int print_char(va_list args)
