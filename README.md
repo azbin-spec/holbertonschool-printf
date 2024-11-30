@@ -22,16 +22,15 @@ The _printf() function processes a format string and arguments to produce format
 
 [gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c](url)
 
-# Requirements
-### General
-
 All your files will be compiled on Ubuntu 20.04 LTS 🖥️ using gcc, with the options:
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 Your code should use the Betty style ✍️. It will be checked using betty-style.pl and betty-doc.pl.
 
 #Requirements
-## General
+## General 
+
+?username=Requirements
 
 # Authorized Functions 🆗
 ## Authorized functions and macros:
