@@ -15,6 +15,8 @@ The _printf() function processes a format string and arguments to produce format
 
 #Compilation & Style ⚙️
 
+[gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c](url)
+
 All your files will be compiled on Ubuntu 20.04 LTS 🖥️ using gcc, with the options:
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
