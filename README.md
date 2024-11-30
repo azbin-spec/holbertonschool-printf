@@ -30,7 +30,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 #Requirements
 ## General 
 
-?username=Requirements
+?username =Requirements
 
 # Authorized Functions 🆗
 ## Authorized functions and macros:
