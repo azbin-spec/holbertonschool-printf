@@ -56,19 +56,20 @@ Prints: Character: A
 .TP
 _printf("Percent sign: %%");
 Prints: Percent sign: %
-	.SH SEE ALSO
+
+.SH SEE ALSO
 .BR printf (3)
 
-	_printf("Number: %d\n", 42);
+_printf("Number: %d\n", 42);
 Prints: Number: 42
 
 .TP
 _printf("Invalid specifier: %z\n");
 Prints: %z (the percent sign and the specifier)
 
-	.SH SEE ALSO
+.SH SEE ALSO
 printf(3), va_start(3), va_arg(3)
 
-	.SH AUTHORS 
-	Brenda Pollagba , Abdellah Dydouh 
+.SH AUTHORS 
+Brenda Pollagba , Abdellah Dydouh 
 
