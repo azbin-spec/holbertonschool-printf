@@ -39,10 +39,14 @@ int print_integer(va_list args);
 
 # File Descriptions
 
-•_printf - Produces formatted output.
-•_putchar - writes the character c to stdout
-•get_op_function - Returns a function corresponding to a specifier
-•op_functions.c: - contains the functions print_char, print_str and print_pct for the case of printing character, string and '%'
-•struct op(main.h) - structure to map a specifier to its function
+• _printf - Produces formatted output.
+
+• _putchar - writes the character c to stdout
+
+• get_op_function - Returns a function corresponding to a specifier
+
+• op_functions.c: - contains the functions print_char, print_str and print_pct for the case of printing character, string and '%'
+
+• struct op(main.h) - structure to map a specifier to its function
 
 ![Screenshot_2024-11-27_132240](https://github.com/user-attachments/assets/f25d17c7-5d6a-4211-ba4e-29ae822c6e93)
