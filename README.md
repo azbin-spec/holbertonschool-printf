@@ -1,3 +1,14 @@
+
+![Uploading images (1).jpg…]()
+
+
+
+
+
+
+
+
+
 # Project Printf 🎉
 
 This repository contains a custom implementation of the _printf() function in C, created as part of the Low-level Programming and Algorithm curriculum at Holberton School 🏫. The function mimics the behavior of the standard printf(), enabling formatted output with various specifiers.
