@@ -1,11 +1,14 @@
 #include "main.h"
 
 /**
- * print_char - Fonction that print a character
- * @character: a character
+ * print_char - Fonction that prints a character
+ * @args: a list
+ * Return: an integer
  */
 
-void print_char(char character)
+int print_char(va_list args)
 {
-	_putchar(character);
+	char character = va_arg(args, int);
+
+	return (_putchar(character));
 }

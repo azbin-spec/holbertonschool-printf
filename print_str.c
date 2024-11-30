@@ -1,19 +1,26 @@
 #include "main.h"
 
 /**
- * print_str - Fonction that print a string
- * @str: a string
+ * print_str - Fonction that prints string
+ * @args: a list
+ * Return: an integer
  */
 
-void print_str(const char *str)
+int print_str(va_list args)
 {
-	int x;
+	int len = 0;
 
-	if (str != NULL)
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
 	{
-		for (x = 0; str[x] != '\0'; x++)
-		{
-			_putchar(str[x]);
-		}
+		str = "(null)";
 	}
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+		len++;
+	}
+	return (len);
 }

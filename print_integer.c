@@ -2,31 +2,35 @@
 
 /**
  * print_integer - Function that prints integer
- * @num: The variable integer
- * Return: 0
+ * @args: a list
+ * Return: length
  */
 
-int print_integer(int num)
-{	
-	if (num >= 0)
-	{
-		_putchar(num);
-	}
-	Return 0
-}
-
-/**
- * print_negative - Function that prints a decimal number
- * @num: The variable integer
- * Return: 0
- */
-
-int print_negative(int num)
+int print_integer(va_list args)
 {
+	int power = 1;
+	int result = 0;
+	long int num = va_arg(args, int);
+	long int div;
+
 	if (num < 0)
 	{
-		_putchar("-");
-		num= -num;
+		result += 1;
+		_putchar('-');
+		num *= -1;
 	}
-	Return 0
+	if (num < 10)
+		return (result += _putchar(num + '0'));
+	div = num;
+	while (div > 9)
+	{
+		power *= 10;
+		div /= 10;
+	}
+	while (power >= 1)
+	{
+		result += (_putchar(((num / power) % 10) + '0'));
+		power /= 10;
+	}
+	return (result);
 }
