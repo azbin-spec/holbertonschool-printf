@@ -35,23 +35,35 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 # Function Prototypes 🛠️
 
 • int _putchar(char c);
+
 • int _printf(const char *format, ...);
+
 • int specifier(char c, va_list args);
+
 • int (*get_op_function(char specifier))(va_list);
+
 • int print_char(va_list args);
+
 • int print_string(va_list args);
+
 • int print_percent(va_list args);
+
 • int print_percent(va_list args);
+
 • int print_integer(va_list args);
 
 File Descriptions 📁
 
 • _printf - Produces formatted output 🎯.
+
 • _putchar - Writes the character c to stdout 🖋️.
+
 • get_op_function - Returns a function corresponding to a specifier 🔍.
+
 • op_functions.c - Contains the functions print_char, print_str, and print_pct for printing character, string, and % respectively 💬.
+
 • struct op(main.h) - Structure to map a specifier to its function 🔄.
 
-#Flowchart 
+# Flowchart 
 
 
