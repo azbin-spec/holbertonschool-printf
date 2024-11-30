@@ -52,7 +52,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 • int print_integer(va_list args);
 
-File Descriptions 📁
+# File Descriptions 📁
 
 • _printf - Produces formatted output 🎯.
 
