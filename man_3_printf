@@ -1,14 +1,13 @@
-
-.TH  _PRINTF 3 "November 2024" "1.0" "Library Functions Manual"
-
+.TH PRINTF 3 "November 2024" "Holbeton School Project" "User Commands"
 
 .SH NAME
-_printf \- Custom implementation of printf for formatted output
+_printf \- produces formatted output
 
 .SH SYNOPSIS
-int _printf(const char *format, ...);
+.B #include "main.h"
+.B int _printf(const char *format, ...);
 
-.SH DESCRIPTION
+.SH SYNOPSIS
 The _printf function is a simplified version of the standard printf function. It processes a format string and prints corresponding arguments based on the format specifiers. It supports basic specifiers for printing characters, strings, and integers, as well as a literal percent sign.
 
 The following format specifiers are supported:
@@ -55,16 +54,16 @@ Prints: Percent sign: %
 	.SH SEE ALSO
 .BR printf (3)
 
-_printf("Number: %d\n", 42);
+	_printf("Number: %d\n", 42);
 Prints: Number: 42
 
 .TP
 _printf("Invalid specifier: %z\n");
 Prints: %z (the percent sign and the specifier)
 
-.SH SEE ALSO
+	.SH SEE ALSO
 printf(3), va_start(3), va_arg(3)
 
-.SH AUTHORS 
-Brenda Palligot , Abdellah Dydouh 
+	.SH AUTHORS 
+	Brenda Palligot , Abdellah Dydouh 
 
