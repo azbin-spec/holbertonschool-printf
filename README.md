@@ -29,7 +29,7 @@ All your files will be compiled on Ubuntu 20.04 LTS 🖥️ using gcc, with the 
 Your code should use the Betty style ✍️. It will be checked using betty-style.pl and betty-doc.pl.
 
 
-# Requirements 
+# Requirements 📝
 ## General
 
 • Allowed editors: vi, vim, emacs 📝
@@ -96,7 +96,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 • struct op(main.h) - Structure to map a specifier to its function 🔄.
 
-# Flowchart 
+# Flowchart 🔄
 
 ![Capture_decran_2024-11-30_203139](https://github.com/user-attachments/assets/353757e9-25ce-4c82-9f4f-b9a9f0929fbf)
 
