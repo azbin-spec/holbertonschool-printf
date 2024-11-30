@@ -66,5 +66,5 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 # Flowchart 
 
-![Screenshot 2024-11-30 023833](https://github.com/user-attachments/assets/37ff8a81-3437-4224-b11e-82974154f626)
+![Capture_decran_2024-11-30_203139](https://github.com/user-attachments/assets/353757e9-25ce-4c82-9f4f-b9a9f0929fbf)
 
