@@ -20,13 +20,14 @@ The _printf() function processes a format string and arguments to produce format
 
 #Compilation & Style ⚙️
 
-[gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c]()
+[gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c](![image](https://github.com/user-attachments/assets/c7ae49a6-4cc3-4f38-b072-e810ed77e2dd)
+)
 
 All your files will be compiled on Ubuntu 20.04 LTS 🖥️ using gcc, with the options:
 
  `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c `
 Your code should use the Betty style ✍️. It will be checked using betty-style.pl and betty-doc.pl.
-![image_2024-11-30_213013362](https://github.com/user-attachments/assets/4df50dac-c256-4728-aea0-5a636d3d9fc9)
+
 
 # Requirements 
 ## General
