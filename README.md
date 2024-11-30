@@ -46,7 +46,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 • No more than 5 functions per file 📂
 
-# Authorized Functions 🆗
+# Authorized functions and macros 🆗
 
 • write (man 2 write) ✉️
 
