@@ -44,7 +44,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 • No more than 5 functions per file 📂
 
-# example of the printf utilization :
+# Example of the printf utilization :
 
 ![Capture_decran_2024-11-30_164459](https://github.com/user-attachments/assets/0ac0599a-594a-476a-a5b0-785f791d5bda)
 
