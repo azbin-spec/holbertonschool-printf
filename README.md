@@ -48,7 +48,11 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 ![Capture_decran_2024-11-30_164459](https://github.com/user-attachments/assets/0ac0599a-594a-476a-a5b0-785f791d5bda)
 
-# Testing 
+# Man page 👨‍💻
+![Screenshot 2024-11-30 234029](https://github.com/user-attachments/assets/484bb64f-f38c-470f-8cf5-94dc2a009373)
+![Screenshot 2024-11-30 234042](https://github.com/user-attachments/assets/f701f9c0-8f77-4824-9b1d-a11561f4fc74)
+
+# Testing 🔍
 
 ![Capture_decran_2024-11-30_221247](https://github.com/user-attachments/assets/ef7d7446-90f4-4173-a34b-cf5655d2aff5)
 
